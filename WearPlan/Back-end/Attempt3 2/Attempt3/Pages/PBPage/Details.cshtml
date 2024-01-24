@@ -1,0 +1,31 @@
+﻿@page
+@model Attempt3.Pages.PBPage.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ProductBrand</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductBrand.idProduct)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductBrand.idProduct)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductBrand.idBrand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductBrand.idBrand)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ProductBrand.idProductBrand">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

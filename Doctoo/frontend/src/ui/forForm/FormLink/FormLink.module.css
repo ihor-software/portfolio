@@ -1,0 +1,19 @@
+.link {
+  @apply text-main font-[600] text-[16px] leading-[24px];
+}
+
+.link-container {
+  @apply flex justify-center gap-[16px];
+}
+
+.subtext {
+  @apply font-[400] text-[16px] leading-[24px] text-grey-1;
+}
+
+.small {
+  @apply text-[14px] leading-[20px];
+}
+
+.disabled {
+  @apply text-grey-1 pointer-events-none;
+}

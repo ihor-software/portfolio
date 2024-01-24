@@ -1,0 +1,7 @@
+.ElementApp input {
+  @apply bg-[#F1F6F9] w-full border border-[#F1F6F9];
+}
+
+.ElementApp {
+  @apply felx flex-col;
+}

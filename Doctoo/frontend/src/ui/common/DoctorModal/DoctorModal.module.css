@@ -1,0 +1,7 @@
+.modalWrapper {
+  @apply max-w-[700px] w-full overflow-y-auto max-h-[800px];
+}
+
+.modalWrapper::-webkit-scrollbar {
+  width: 0;
+}

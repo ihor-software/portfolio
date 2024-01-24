@@ -1,0 +1,11 @@
+.input {
+  @apply flex flex-wrap items-center gap-2 px-4 py-2 border border-transparent rounded-lg hover:border-main focus-within:border-main bg-bg max-h-[150px] overflow-y-auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-main-medium rounded-md;
+}

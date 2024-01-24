@@ -1,0 +1,7 @@
+.itemFlex {
+  @apply flex flex-col gap-4;
+}
+
+.navigation {
+  @apply py-12 bg-main text-white flex flex-col gap-8 shrink-0;
+}

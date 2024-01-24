@@ -1,0 +1,11 @@
+.separator-container {
+  @apply flex justify-between items-center;
+}
+
+.subline {
+  @apply border-b w-1/2 h-[1px] border-grey-4 inline-block;
+}
+
+.subtext {
+    @apply font-[400] text-[16px] leading-[24px] text-grey-1 w-full text-center;
+  }

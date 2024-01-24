@@ -1,0 +1,130 @@
+version: '3.0'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.6.14-management
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://127.0.0.1:5672']
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+  email:
+    image: bilanuk/doctoo-email:latest
+    build:
+      context: ./email-microservice
+      dockerfile: ./Dockerfile.prod
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      MAIL_HOST: ${MAIL_HOST}
+      MAIL_USER: ${MAIL_USER}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+      MAIL_FROM: ${MAIL_FROM}
+      MAIL_PORT: ${MAIL_PORT}
+      BACKEND_HOST: ${BACKEND_HOST}
+    ports:
+      - 6000:6000
+    depends_on:
+      - rabbitmq
+
+  backend:
+    image: bilanuk/doctoo-backend:latest
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile.prod
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      DB_PORT: ${DB_PORT}
+      DB_HOST: ${DB_HOST}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      BACKEND_PORT: ${BACKEND_PORT}
+      FRONTEND_PORT: ${FRONTEND_PORT}
+      BACKEND_HOST: ${BACKEND_HOST}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRATION_TIME: ${JWT_EXPIRATION_TIME}
+      JWT_REFRESH_TOKEN_SECRET: ${JWT_REFRESH_TOKEN_SECRET}
+      JWT_REFRESH_TOKEN_EXPIRATION_TIME: ${JWT_REFRESH_TOKEN_EXPIRATION_TIME}
+      GOOGLE_AUTH_CLIENT_ID: ${GOOGLE_AUTH_CLIENT_ID}
+      GOOGLE_AUTH_CLIENT_SECRET: ${GOOGLE_AUTH_CLIENT_SECRET}
+      MAIL_HOST: ${MAIL_HOST}
+      MAIL_USER: ${MAIL_USER}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+      MAIL_FROM: ${MAIL_FROM}
+      MAIL_PORT: ${MAIL_PORT}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME}
+      AWS_S3_REGION: ${AWS_S3_REGION}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      GOOGLE_CLOUD_HEALTHCARE_NLP_API_PROJECT_ID: ${GOOGLE_CLOUD_HEALTHCARE_NLP_API_PROJECT_ID}
+      GOOGLE_CLOUD_HEALTHCARE_NLP_API_PRIVATE_KEY_ID: ${GOOGLE_CLOUD_HEALTHCARE_NLP_API_PRIVATE_KEY_ID}
+      GOOGLE_CLOUD_HEALTHCARE_NLP_API_PRIVATE_KEY: ${GOOGLE_CLOUD_HEALTHCARE_NLP_API_PRIVATE_KEY}
+      GOOGLE_CLOUD_HEALTHCARE_NLP_API_CLIENT_EMAIL: ${GOOGLE_CLOUD_HEALTHCARE_NLP_API_CLIENT_EMAIL}
+      GOOGLE_CLOUD_HEALTHCARE_NLP_API_CLIENT_ID: ${GOOGLE_CLOUD_HEALTHCARE_NLP_API_CLIENT_ID}
+      GOOGLE_CLOUD_HEALTHCARE_NLP_API_REGION: ${GOOGLE_CLOUD_HEALTHCARE_NLP_API_REGION}
+      GOOGLE_CLOUD_HEALTHCARE_NLP_API_PROJECT_NAME: ${GOOGLE_CLOUD_HEALTHCARE_NLP_API_PROJECT_NAME}
+      TWO_FA_APP_NAME: ${TWO_FA_APP_NAME}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
+      STRIPE_CURRENCY: ${STRIPE_CURRENCY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_API_MODEL: ${OPENAI_API_MODEL}
+      VIDEOSDK_API_KEY: ${VIDEOSDK_API_KEY}
+      VIDEOSDK_SECRET_KEY: ${VIDEOSDK_SECRET_KEY}
+      VIDEOSDK_API_ENDPOINT: ${VIDEOSDK_API_ENDPOINT}
+    ports:
+      - 8000:8000
+    volumes:
+      - doctoo-backend-src:/app/src
+      - doctoo-backend-test:/app/test
+      - doctoo-backend-shared:/app/node_modules/shared
+    depends_on:
+      - db
+    links:
+      - db
+
+  frontend:
+    image: bilanuk/doctoo-frontend:latest
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile.prod
+      args:
+        NODE_ENV: ${NODE_ENV}
+        BACKEND_HOST: ${BACKEND_HOST}
+    environment:
+      FRONTEND_PORT: ${FRONTEND_PORT}
+      REACT_APP_STRIPE_PUBLISHABLE_KEY: ${REACT_APP_STRIPE_PUBLISHABLE_KEY}
+      REACT_APP_GOOGLE_AUTH_CLIENT_ID: ${REACT_APP_GOOGLE_AUTH_CLIENT_ID}
+      REACT_APP_GOOGLE_AUTH_CLIENT_SECRET: ${REACT_APP_GOOGLE_AUTH_CLIENT_SECRET}
+    ports:
+      - 80:80
+    volumes:
+      - doctoo-frontend-src:/app/src
+      - doctoo-frontend-shared:/app/node_modules/shared
+    depends_on:
+      - backend
+    links:
+      - backend
+
+  db:
+    image: postgres:14.2-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: user
+      POSTGRES_DB: prod_db
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  doctoo-backend-src:
+  doctoo-backend-test:
+  doctoo-backend-shared:
+  doctoo-frontend-src:
+  doctoo-frontend-shared:
+  db_data:

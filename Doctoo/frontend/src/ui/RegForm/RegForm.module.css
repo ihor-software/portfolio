@@ -1,0 +1,11 @@
+.form-container {
+  @apply w-[600px] bg-white flex flex-col gap-[32px] max-h-screen  overflow-y-auto;
+}
+
+.subline {
+  @apply border-b w-[85px] h-[1px] border-grey-4 inline-block;
+}
+
+.inputGroup{
+  @apply flex gap-3 justify-between
+}

@@ -1,0 +1,18 @@
+version: 1
+task_definition:
+  ecs_network_mode: bridge
+  efs_volumes:
+    - name: db_data
+      filesystem_id: fs-00a063dea76ba5ea2
+      transit_encryption: ENABLED
+  services:
+    backend:
+      mem_limit: 300MB
+    frontend:
+      mem_limit: 100MB
+    db:
+      mem_limit: 128MB
+    email:
+      mem_limit: 200MB
+    rabbitmq:
+      mem_limit: 200MB

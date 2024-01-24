@@ -1,0 +1,15 @@
+.active {
+  @apply bg-white text-black-1;
+}
+
+.inactive {
+  @apply hover:bg-main-dark hover:text-white;
+}
+
+.navLink {
+  @apply py-3 px-4 flex gap-2 items-center rounded-xl justify-start text-xs self-stretch leading-6 box-content;
+}
+
+.navItemText {
+  @apply absolute group-hover:block left-[60px] hidden rounded-xl p-2 w-max text-white bg-main-dark transition-all duration-150;
+}

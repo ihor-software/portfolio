@@ -1,0 +1,7 @@
+.modalWrapper {
+  @apply w-full max-w-[700px];
+}
+
+.titleIcon {
+  @apply bg-bg/10 w-[36px] h-[36px] rounded-full p-1.5 bg-[length:100px_100px] bg-center;
+}

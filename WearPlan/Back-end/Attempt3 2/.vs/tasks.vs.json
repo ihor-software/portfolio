@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Brands",
+      "appliesTo": "Attempt3/Pages/Brands/",
+      "type": "launch"
+    }
+  ]
+}

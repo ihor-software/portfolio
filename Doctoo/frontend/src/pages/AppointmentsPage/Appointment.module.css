@@ -1,0 +1,23 @@
+.search::placeholder {
+    font-family: Inter;
+}
+
+.content {
+    @apply grow h-full p-8;
+}
+
+.header {
+    @apply flex flex-col mb-6 md:justify-between md:flex-row md:mb-0;
+}
+
+.title {
+    @apply leading-9 text-black-1;
+}
+
+.search {
+    @apply w-full h-full border-none rounded-lg font-sans outline-none;
+}
+
+.titlesection {
+    @apply flex items-center gap-3 mb-6;
+}

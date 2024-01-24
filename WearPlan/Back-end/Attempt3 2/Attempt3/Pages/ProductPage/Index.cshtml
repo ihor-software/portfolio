@@ -1,0 +1,96 @@
+﻿@page
+@model Attempt3.Pages.ProductPage.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].idCategory)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].idSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].specs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].idBrand)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].idClient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].idDiscount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Product) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idCategory)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.specs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idBrand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idClient)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idDiscount)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.idProduct">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.idProduct">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.idProduct">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

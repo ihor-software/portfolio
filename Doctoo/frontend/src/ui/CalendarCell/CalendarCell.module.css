@@ -1,0 +1,15 @@
+.blacktext {
+    @apply text-black;
+}
+
+.cell {
+    @apply flex justify-between items-stretch flex-col h-[100px] w-[100px] bg-white rounded-xl cursor-pointer;
+}
+
+.day {
+    @apply justify-center items-center flex mr-2.5 mt-2.5 w-7 h-7 rounded-full;
+}
+
+.callscount {
+    @apply w-5 h-5 bg-white flex justify-center items-center rounded-full text-sm;
+}

@@ -1,0 +1,11 @@
+﻿@page
+@model Attempt3.Pages.ProfileModel
+@{
+}
+<p>Hi, @User.Identity.Name</p>
+<hr />
+<p><a class="nav-link text-dark" asp-page="/ProductPage/Create"  asp-route-name="@User.Identity.Name">Add Product</a></p>
+<p><a class="nav-link text-dark" asp-page="/ManageProducts">Manage Products</a></p>
+<p><a class="nav-link text-dark" asp-page="/Selections">My selections</a></p>
+<p><a class="nav-link text-dark" asp-page="/Products/Create">Subscription</a></p>
+<p><a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index">Settings</a></p>

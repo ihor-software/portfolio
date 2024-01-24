@@ -1,0 +1,6 @@
+.checkbox_checked {
+  @apply before:w-6 before:h-6 before:rounded before:absolute before:top-1/2
+           before:left-1/2 before:translate-x-[-50%] before:translate-y-[-50%]
+           after:w-[12px] after:h-[8px] after:content-tick after:absolute after:top-1/2  
+           after:left-1/2 after:translate-x-[-50%] after:translate-y-[-150%];
+}

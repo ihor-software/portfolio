@@ -1,0 +1,100 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3.6.14-management
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+  email:
+    image: doctoo-email:latest
+    build:
+      context: ./email-microservice
+      dockerfile: ./Dockerfile.dev
+    env_file: ./.env.dev
+    ports:
+      - 6000:6000
+    volumes:
+      - ./email-microservice/src:/app/src
+      - ./shared/dist:/app/node_modules/shared
+      - ./email-microservice/test:/app/test
+    depends_on:
+      - rabbitmq
+
+  backend:
+    image: bilanuk/doctoo-backend:latest
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile.dev
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      DB_PORT: ${DB_PORT}
+      DB_HOST: ${DB_HOST}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      BACKEND_PORT: ${BACKEND_PORT}
+      FRONTEND_PORT: ${FRONTEND_PORT}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRATION_TIME: ${JWT_EXPIRATION_TIME}
+      JWT_REFRESH_TOKEN_SECRET: ${JWT_REFRESH_TOKEN_SECRET}
+      JWT_REFRESH_TOKEN_EXPIRATION_TIME: ${JWT_REFRESH_TOKEN_EXPIRATION_TIME}
+      GOOGLE_AUTH_CLIENT_ID: ${GOOGLE_AUTH_CLIENT_ID}
+      GOOGLE_AUTH_CLIENT_SECRET: ${GOOGLE_AUTH_CLIENT_SECRET}
+      FRONTEND_HOST: ${FRONTEND_HOST}
+      MAIL_HOST: ${MAIL_HOST}
+      MAIL_USER: ${MAIL_USER}
+      MAIL_PASSWORD: ${MAIL_PASSWORD}
+      MAIL_FROM: ${MAIL_FROM}
+      MAIL_PORT: ${MAIL_PORT}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME}
+      AWS_S3_REGION: ${AWS_S3_REGION}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY}
+    env_file: ./.env.dev
+    ports:
+      - ${BACKEND_PORT}:${BACKEND_PORT}
+    volumes:
+      - ./backend/migrations:/app/migrations
+      - ./backend/seeders:/app/seeders
+      - ./backend/prod_seeders:/app/prod_seeders
+      - ./backend/src:/app/src
+      - ./shared/dist:/app/node_modules/shared
+      - ./backend/test:/app/test
+    depends_on:
+      - db
+      - rabbitmq
+
+  frontend:
+    image: bilanuk/doctoo-frontend:latest
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile.dev
+    environment:
+      REACT_APP_BACKEND_PORT: ${BACKEND_PORT}
+      REACT_APP_BACKEND_HOST: ${BACKEND_HOST}
+      REACT_APP_GOOGLE_AUTH_CLIENT_ID: ${GOOGLE_AUTH_CLIENT_ID}
+      REACT_APP_GOOGLE_AUTH_CLIENT_SECRET: ${GOOGLE_AUTH_CLIENT_SECRET}
+      FRONTEND_PORT: ${FRONTEND_PORT}
+    env_file: ./.env.dev
+    ports:
+      - ${FRONTEND_PORT}:${FRONTEND_PORT}
+    volumes:
+      - ./frontend/src:/app/src
+      - ./shared/dist:/app/node_modules/shared
+    depends_on:
+      - backend
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
+  db:
+    image: postgres:14.2-alpine
+    restart: on-failure
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - ${DB_PORT}:5432

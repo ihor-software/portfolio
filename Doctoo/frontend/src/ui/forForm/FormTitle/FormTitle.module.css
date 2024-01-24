@@ -1,0 +1,15 @@
+.title {
+  @apply font-[500] text-[32px] leading-[48px] text-black-1;
+}
+
+.subtext {
+  @apply font-[400] text-[16px] leading-[24px] text-grey-1;
+}
+
+.title-small {
+  @apply text-[18px] leading-[24px];
+}
+
+.subtext-small {
+  @apply text-[14px] leading-[20px];
+}

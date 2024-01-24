@@ -1,0 +1,7 @@
+.logo-text {
+  @apply font-logo text-[20px] leading-[28px] text-main;
+}
+
+.logo-container {
+  @apply flex gap-[9px] h-[28px] w-auto;
+}

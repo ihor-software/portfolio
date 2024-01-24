@@ -1,0 +1,15 @@
+.modal {
+  @apply flex flex-col items-end w-[588px] h-[196px] bg-white rounded-[12px] p-[8px];
+}
+
+.title {
+  @apply font-[500] text-[24px] leading-[36px] text-black;
+}
+
+.subtext {
+  @apply font-[400] text-[16px] leading-[24px] text-black-2;
+}
+
+.text-container {
+  @apply flex flex-col gap-[16px] px-[38px] py-[16px];
+}

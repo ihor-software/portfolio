@@ -1,0 +1,25 @@
+name: Chromatic Publish
+
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - 'frontend/**'
+
+jobs:
+  chromatic-deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Prepare frontend & shared folder
+        run:
+          npm install && npm run init:frontend && npm run init:shared && npm run build:shared && npm
+          run link-shared
+      - name: Publish to Chromatic
+        run:
+          cd frontend && npx chromatic --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          --exit-zero-on-changes --only-changed --build-script-name=build:storybook

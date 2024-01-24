@@ -1,0 +1,19 @@
+.container {
+  @apply w-full h-screen min-h-[780px] flex 2xl:items-center  bg-white;
+}
+
+.illustration-container {
+  @apply w-5/12 h-full flex flex-col;
+}
+
+.illustration {
+  @apply w-full h-full object-cover;
+}
+
+.form {
+  @apply mx-auto my-[60px];
+}
+
+.forTF {
+  @apply min-h-[600px] items-center;
+}

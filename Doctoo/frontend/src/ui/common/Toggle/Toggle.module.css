@@ -1,0 +1,15 @@
+.mask {
+    @apply flex w-[51px] h-[32px] bg-[#E5EBEC] rounded-full transition-all duration-300 cursor-pointer;
+}
+
+.knob {
+    @apply mt-[2px] ml-[2px] w-[28px] h-[28px] bg-white rounded-3xl transition-all duration-300;
+}
+
+.mask-toggled {
+    @apply  bg-[#089BAB];
+}
+
+.knob-toggled {
+    @apply ml-[21px];
+}

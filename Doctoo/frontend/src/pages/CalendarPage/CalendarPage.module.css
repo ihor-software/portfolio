@@ -1,0 +1,12 @@
+.no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}

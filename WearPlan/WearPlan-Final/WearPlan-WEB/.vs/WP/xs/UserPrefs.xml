@@ -1,0 +1,89 @@
+﻿<Properties StartupConfiguration="{A0590CFB-3776-4C5A-A205-2C5A91CA856A}|Default">
+  <MonoDevelop.Ide.ItemProperties.WP PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WP/Views/Home/Privacy.cshtml">
+    <Files>
+      <File FileName="WP/Program.cs" Line="16" Column="1" />
+      <File FileName="WP/Properties/launchSettings.json" />
+      <File FileName="WP/Models/Client.cs" />
+      <File FileName="WP/Models/Customer.cs" />
+      <File FileName="WP/Models/Product.cs" />
+      <File FileName="WP/Models/ProductPurchase.cs" />
+      <File FileName="WP/Models/Purchase.cs" />
+      <File FileName="WP/Models/Selection.cs" />
+      <File FileName="WP/Models/Subscriber.cs" />
+      <File FileName="WP/Controllers/ClientController.cs" />
+      <File FileName="WP/Data/wpContext.cs" />
+      <File FileName="WP/Views/Shared/_Layout.cshtml" />
+      <File FileName="WP/Views/Client/Create.cshtml" />
+      <File FileName="WP/Views/Purchase/Index.cshtml" />
+      <File FileName="WP/Views/Client/Index.cshtml" />
+      <File FileName="WP/Views/Auth/Login.cshtml" />
+      <File FileName="WP/Views/Client/Delete.cshtml" />
+      <File FileName="WP/Views/Client/Details.cshtml" />
+      <File FileName="WP/Models/Person.cs" />
+      <File FileName="WP/Controllers/HomeController.cs" />
+      <File FileName="WP/Startup.cs" />
+      <File FileName="WP/appsettings.json" />
+      <File FileName="WP/Views/Admin/AdminView.cshtml" />
+      <File FileName="WP/Controllers/AdminController.cs" />
+      <File FileName="WP/Views/Home/Index.cshtml" />
+      <File FileName="WP/wwwroot/js/site.js" />
+      <File FileName="WP/Views/ClientProfile/Profile.cshtml" />
+      <File FileName="WP/Controllers/ClientProfileController.cs" />
+      <File FileName="WP/Controllers/ManageProductsController.cs" />
+      <File FileName="WP/Views/ManageProducts/Manage.cshtml" />
+      <File FileName="WP/Views/Product/Index.cshtml" />
+      <File FileName="WP/Controllers/ProductController.cs" />
+      <File FileName="WP/Controllers/ProductPurchaseController.cs" />
+      <File FileName="WP/Views/Product/Create.cshtml" />
+      <File FileName="WP/Views/Product/Edit.cshtml" />
+      <File FileName="WP/Views/Selections/Selection.cshtml" />
+      <File FileName="WP/Controllers/SelectionsController.cs" />
+      <File FileName="WP/Views/Home/Privacy.cshtml" Line="18" Column="96" />
+      <File FileName="WP/Views/Customer/Index.cshtml" />
+      <File FileName="WP/Controllers/CustomerController.cs" />
+      <File FileName="WP/Controllers/SelectionController.cs" />
+      <File FileName="WP/Controllers/AuthController.cs" />
+      <File FileName="WP/Views/Subscribtion/Subscribe.cshtml" />
+      <File FileName="WP/Controllers/SubscriberController.cs" />
+      <File FileName="WP/Views/Subscriber/Create.cshtml" />
+      <File FileName="WP/Views/Subscriber/Index.cshtml" />
+      <File FileName="WP/Views/Auth/Register.cshtml" />
+      <File FileName="WP/Views/_ViewStart.cshtml" />
+      <File FileName="WP/Views/Product/Create_client.cshtml" />
+      <File FileName="WP/Controllers/PurchaseController.cs" />
+      <File FileName="WP/Migrations/20210104201942_Initial.cs" />
+      <File FileName="WP/Migrations/20210104201942_Initial.Designer.cs" />
+      <File FileName="WP/Migrations/wpContextModelSnapshot.cs" />
+      <File FileName="WP/Views/Product/Delete.cshtml" />
+      <File FileName="WP/Views/Product/Details.cshtml" />
+      <File FileName="WP/Views/Purchase/Create.cshtml" />
+      <File FileName="WP/Views/Purchase/Delete.cshtml" />
+      <File FileName="WP/Views/Purchase/Details.cshtml" />
+      <File FileName="WP/Views/Purchase/Edit.cshtml" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WP" expanded="True">
+            <Node name="WP" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True">
+                  <Node name="Privacy.cshtml" selected="True" />
+                </Node>
+                <Node name="ManageProducts" expanded="True" />
+                <Node name="Purchase" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

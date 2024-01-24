@@ -1,0 +1,90 @@
+@model WP.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.category)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.category)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.model)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.model)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.size)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.size)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.sex)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.sex)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.image)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.image)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.description)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.specs)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.specs)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.brand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.brand)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.client)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.client)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.discount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.discount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.code)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.code)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.idProduct">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

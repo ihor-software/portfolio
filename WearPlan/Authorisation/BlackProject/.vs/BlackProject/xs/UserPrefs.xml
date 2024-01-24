@@ -1,0 +1,52 @@
+﻿<Properties StartupConfiguration="{5CE5279D-2F2A-47E1-BD06-8B2EECD94E55}|Default">
+  <MonoDevelop.Ide.ItemProperties.BlackProject PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
+    <Files>
+      <File FileName="appsettings.json" Line="3" Column="152" />
+      <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" />
+      <File FileName="Views/Shared/_LoginPartial.cshtml" />
+      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="Models/ErrorViewModel.cs" />
+      <File FileName="Views/Home/Index.cshtml" />
+      <File FileName="Views/Home/Privacy.cshtml" />
+      <File FileName="Views/Shared/_Layout.cshtml" />
+      <File FileName="Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="Views/_ViewImports.cshtml" />
+      <File FileName="Views/_ViewStart.cshtml" />
+      <File FileName="Program.cs" />
+      <File FileName="Startup.cs" Line="33" Column="112" />
+      <File FileName="Data/ApplicationDbContext.cs" />
+      <File FileName="Properties/launchSettings.json" />
+      <File FileName="appsettings.Development.json" />
+      <File FileName="wwwroot/js/site.js" />
+      <File FileName="wwwroot/lib/jquery-validation/dist/additional-methods.js" />
+      <File FileName="Views/Shared/Error.cshtml" />
+      <File FileName="Data/Migrations/00000000000000_CreateIdentitySchema.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BlackProject" expanded="True">
+            <Node name="BlackProject" expanded="True">
+              <Node name="Areas" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

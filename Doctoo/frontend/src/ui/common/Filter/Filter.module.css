@@ -1,0 +1,7 @@
+.filter {
+  @apply flex text-black-2 items-center bg-white relative rounded-full p-1 px-4 cursor-pointer;
+}
+
+.dropdown {
+  @apply bg-white flex-col absolute min-w-full top-full mt-1 left-0 z-10 p-2 rounded-xl overflow-y-auto max-h-[200px];
+}

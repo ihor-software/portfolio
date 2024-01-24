@@ -1,0 +1,29 @@
+FROM node:16-alpine as build
+
+WORKDIR /app
+
+COPY ./package*.json .
+RUN npm ci
+
+COPY . .
+RUN npm run build
+
+FROM node:16-alpine
+
+WORKDIR /app
+
+COPY ./package*.json .
+RUN npm ci --only=production
+RUN npm install -g sequelize-cli
+
+COPY --from=build /app/dist ./dist
+COPY --from=build /app/src/config/config.mjs ./dist/config/config.mjs
+COPY --from=build /app/prod_seeders ./dist/seeders
+COPY --from=build /app/migrations ./dist/migrations
+COPY --from=build /app/entrypoint.sh ./dist/entrypoint.sh
+
+RUN chmod +x ./dist/entrypoint.sh
+
+EXPOSE 8000
+
+CMD ["./dist/entrypoint.sh"]

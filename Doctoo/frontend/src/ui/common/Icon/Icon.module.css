@@ -1,0 +1,19 @@
+.white {
+    @apply filter brightness-200;
+}
+
+.main {
+    @apply filter saturate-[3276%] brightness-[75%] contrast-[94%];
+}
+
+.timer-yellow {
+    @apply filter invert-[86%] sepia-[82%] saturate-[2109%] hue-rotate-[315deg] brightness-[96%] contrast-[109%];
+}
+
+.icon {
+    @apply inline;
+}
+
+.search {
+    @apply m-2;
+}

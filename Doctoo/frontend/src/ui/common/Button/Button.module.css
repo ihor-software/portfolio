@@ -1,0 +1,27 @@
+.main,
+.secondary,
+.flat,
+.error {
+  @apply shrink-0 flex items-center rounded-lg h-10 text-base font-sans  border justify-center;
+}
+
+.main,
+.secondary {
+  @apply min-w-fit px-6 gap-2 border-main disabled:border-grey-4 active:border-[#05616B];
+}
+
+.main {
+  @apply bg-main text-white disabled:bg-grey-4 hover:bg-main-dark  active:bg-[#05616B];
+}
+
+.secondary {
+  @apply bg-white  text-main  hover:text-main-dark  disabled:text-grey-4  active:text-[#05616B];
+}
+
+.flat {
+  @apply gap-1 border-transparent text-grey-1 w-auto;
+}
+
+.error {
+  @apply bg-error text-white disabled:bg-error-light disabled:text-error hover:bg-red  active:bg-red-2;
+}

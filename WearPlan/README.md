@@ -1,0 +1,1 @@
+# WearPlan is a study project with IOS application, AspNetCore application, Arduino barcode Scanner that represent System for Shop owners showing them Product selections and giving ability to create own Products as in Online Shop

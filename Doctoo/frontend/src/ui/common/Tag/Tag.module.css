@@ -1,0 +1,31 @@
+.text {
+  font-family: Inter;
+}
+
+.container {
+  @apply bg-[#D9F0F2] inline-flex py-[4px] px-[12px] rounded-[16px] items-center gap-[4px];
+}
+
+.text {
+  @apply text-[#089BAB] text-[14px] font-[400] leading-[20px];
+}
+
+.secondary {
+  @apply text-main-dark bg-white text-[14px] font-[400] leading-[20px];
+}
+
+.error {
+  @apply text-[#ED5252] bg-[#FCF0ED];
+}
+
+.info {
+  @apply text-[#F2A450] bg-[#FDF4E7];
+}
+
+.icon-base {
+  @apply rounded-full bg-white w-[24px] h-[24px] inline text-center;
+}
+
+.icon-secondary {
+  @apply rounded-full bg-main-light w-[24px] h-[24px] inline text-center;
+}

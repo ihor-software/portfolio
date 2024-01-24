@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WP.Models.Product>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to WearPlan!</h1>
+</div>
+
+
+<div class="container">
+    <div class="row row-cols-2 row-cols-md-2">
+        @foreach (var item in Model)
+            {
+
+                <div class="col-4 mb-4">
+                    <div class="card">
+                        <img src=@Html.DisplayFor(modelItem => item.image) class="card-img-top" alt="" height="300">
+                        <div class="card-body">
+                            <h5 class="card-title"> @Html.DisplayFor(modelItem => item.model)</h5>
+                            <p class="card-text">@Html.DisplayFor(modelItem => item.description)</p>
+                        </div>
+                    </div>
+                </div>
+                }
+        </div>
+</div>

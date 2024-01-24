@@ -1,0 +1,64 @@
+.login{
+    background-color: #020217;
+    width: 435px;
+    height: 480px;
+    margin-left: 30%;
+    margin-top: 10%;
+
+}
+.placeinput{
+    background-color: #020217;
+    outline:none;
+    width: 320px;
+    height: 45px;
+    border: 1px solid #292929;
+    color: white;
+    padding-left: 15px;
+    border-radius: 4px;
+}
+.Title{
+    color: #FFFFFF;
+    align-content: center;
+    margin-left: 180px;
+}
+.demail{
+    margin-bottom: 15px;
+    margin-top: 50px;
+  
+}
+.demail1{
+    margin-bottom: 25px;
+    margin-top: 20px;
+  
+}
+.dibutton{
+    margin-top: 15px;
+    margin-left: 65px;
+}
+.butlog{
+    background-color: #3355EC;
+    outline:none;
+    width: 320px;
+    height: 45px;
+    color: white;
+    border-radius: 4px;
+    border:0 none;
+
+}
+.dibuttonsig{
+    margin-top: 25px;
+    margin-left: 65px;
+}
+.butsig{
+    background-color: #020217;
+    outline:none;
+    width: 320px;
+    height: 45px;
+    color: white;
+    border-radius: 4px ;
+    border: 1px solid #292929;
+    text-decoration: none;
+    cursor: default;
+    padding: 10px 95px 13px 95px;
+
+}

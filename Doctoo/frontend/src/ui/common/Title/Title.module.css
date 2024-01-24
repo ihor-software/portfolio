@@ -1,0 +1,8 @@
+.title-container {
+  font-family: Inter;
+  @apply flex justify-between items-center flex-wrap w-full;
+}
+
+.title {
+  @apply flex items-center;
+}

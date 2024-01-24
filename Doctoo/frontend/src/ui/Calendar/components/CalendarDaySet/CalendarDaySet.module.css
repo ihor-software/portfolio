@@ -1,0 +1,23 @@
+.default {
+  @apply cursor-pointer;
+}
+
+.selected {
+  @apply cursor-pointer;
+  @apply bg-main-light;
+  @apply rounded-full;
+}
+
+.disabled {
+  @apply text-grey-4;
+}
+
+.right_range {
+  @apply rounded-r-full;
+  @apply bg-main-light;
+}
+
+.left_range {
+  @apply rounded-l-full;
+  @apply bg-main-light;
+}

@@ -1,0 +1,28 @@
+.find-doctor-form {
+  @apply flex items-center w-full;
+}
+
+.find-doctor-form label {
+  @apply hidden;
+}
+
+.find-doctor-form button {
+  @apply ml-5 min-w-[160px];
+}
+
+.find-doctor-form label + div,
+.find-doctor-form input {
+  @apply bg-white border-none outline-none;
+}
+
+.find-doctor-form input {
+  @apply w-[231px];
+}
+
+.find-doctor-form label + div {
+  @apply pl-[50px];
+}
+
+.find-doctor-form svg {
+  @apply ml-5 -mr-10 relative z-10;
+}

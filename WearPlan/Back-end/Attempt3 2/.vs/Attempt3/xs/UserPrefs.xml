@@ -1,0 +1,51 @@
+﻿<Properties StartupConfiguration="{46F96B31-C389-43CB-AB6F-A45F2751626D}|Default">
+  <MonoDevelop.Ide.ItemProperties.Attempt3 PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Attempt3/Startup.cs">
+    <Files>
+      <File FileName="Attempt3/Models/Product.cs" Line="14" Column="42" />
+      <File FileName="Attempt3/Pages/Shared/_Layout.cshtml" Line="31" Column="26" />
+      <File FileName="Attempt3/Controllers/HomeController.cs" Line="9" Column="19" />
+      <File FileName="Attempt3/Data/ApplicationDbContext.cs" Line="14" Column="10" />
+      <File FileName="Attempt3/Models/ErrorViewModel.cs" Line="11" Column="2" />
+      <File FileName="Attempt3/Pages/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="Attempt3/Startup.cs" Line="11" Column="37" />
+      <File FileName="Attempt3/appsettings.json" Line="1" Column="1" />
+      <File FileName="Attempt3/Data/Migrations/ApplicationDbContextModelSnapshot.cs" Line="10" Column="2" />
+      <File FileName="Attempt3/Data/MyAppContext.cs" Line="11" Column="1" />
+      <File FileName="Attempt3/Pages/Shared/_LoginPartial.cshtml" Line="18" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Attempt3" expanded="True">
+            <Node name="Attempt3" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True">
+                <Node name="Migrations" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Pages" expanded="True">
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Shared" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

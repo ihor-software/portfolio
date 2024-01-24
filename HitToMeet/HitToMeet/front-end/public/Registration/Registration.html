@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset = "utf-8">
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 16px;
+    background: #020217;
+    border-radius: 10px;
+    width:30%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 143.2%;
+    color: grey
+  }
+
+  input[type=text], input[type=password],[type=email]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: 1px solid #292929;
+    background-color:black;
+    color: white;
+  }
+
+  p{
+    font-size: 12px;
+    line-height: 143.2%;
+    color: grey;
+  }
+  .registerbtn {
+    background: #3355EC;
+    border-radius: 4px;
+    width:100%;
+    height: 50px;
+    border: 1px solid #292929;
+    color:white;
+  }
+  .btn{
+    display: inline-block;
+    width: 49%;
+    height: 50px;
+    border: 1px solid #292929;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color:black;
+    color: #898E99;
+  }
+  .active, .btn:hover {
+    background-color: #666;
+    color: white;
+  }
+
+
+  .registerbtn:hover {
+    opacity: 1;
+  }
+
+  </style>
+</head>
+<body>
+<form>
+  <div class="container" >
+    <h2 style="text-align:center;color:white">Регистрация</h2>
+
+    <input type="email" placeholder="Введите email" name="email" id="email" required>
+
+    <input type="password" placeholder="Придумайте пароль" name="psw" id="psw"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать как минимум одну цифру, одну заглавную и строчную букву и как минимум 8 или более символов."required>
+
+    <input type="text" placeholder="Никнейм" name="nickname" id="nickname" required>
+    <p>Выберете ваш пол</p>
+      <div id="myDIV">
+        <button class="btn" type="button">МУЖСКОЙ</button>
+        <button class="btn active" type="button">ЖЕНСКИЙ</button>
+      </div>
+      <p>
+
+    <button type="submit" class="registerbtn">Создать</button>
+    <p style="text-align:center"><a>У меня уже есть аккаунт</a></p>
+  </div>
+  </form>
+  <script>
+  var header = document.getElementById("myDIV");
+  var btns = header.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    });
+  }
+  </script>
+
+
+
+
+</body>
+</html>

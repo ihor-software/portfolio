@@ -1,0 +1,105 @@
+.quiz{
+    background-color: #020217;
+    position: fixed;
+    top: 15%;
+    left: 37%;
+    width: 435px;
+    height: 480px;
+
+}
+
+.Title{
+    color: #FFFFFF;
+    text-align:  center;
+}
+.demail{
+    margin-bottom: 100px;
+    margin-top: 30px;
+  
+}
+
+.dem{
+    margin-top: 40px;
+
+}
+
+.dibutton{
+    margin-top: 65px;
+    margin-left: 50px;
+    
+}
+.butlog{
+    background-color: #3355EC;
+    outline:none;
+    width: 335px;
+    height: 45px;
+    color: white;
+    border-radius: 4px;
+    border:0 none;
+    
+
+}
+.dibuttonsig{
+    margin-top: 25px;
+}
+.question{
+    color: #D8D8D8;
+    font-weight: normal;
+    text-align:  center;
+}
+
+
+.containers {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    color: #020217 ;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+.containers input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 335px;
+    height: 40px;
+    background-color: #020217;
+    border-radius: 4px;
+    border: 1px solid #292929;
+    color: white;
+    padding-top: 2px;
+    padding-left: 15px;
+    margin-left: 50px;
+  }
+
+  
+  /* When the radio button is checked, add a blue background */
+.containers input:checked ~ .checkmark {
+    background-color: #FFFFFF;
+    color: black;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+.containers input:checked ~ .checkmark:after {
+    display: none;
+  }
+  

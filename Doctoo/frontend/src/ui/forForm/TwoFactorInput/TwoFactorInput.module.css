@@ -1,0 +1,20 @@
+.no-spin-buttons::-webkit-inner-spin-button,
+.no-spin-buttons::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.input {
+  @apply w-[44px] h-[40px] bg-bg border border-bg hover:border-main focus:outline-none focus:border-main rounded-[8px] text-center text-[16px] leading-[24px] text-black-2 no-spin-buttons;
+}
+
+.container {
+  @apply flex gap-[24px] justify-center;
+}
+
+.subcontainer {
+  @apply flex gap-[8px];
+}
+
+.dash { 
+  @apply text-grey-2;
+}

@@ -1,0 +1,20 @@
+.external-creation-button {
+  @apply w-[172px];
+}
+
+.autoreg-button-text {
+  @apply flex gap-[8px] items-center justify-center;
+}
+
+.autoreg-buttons {
+  @apply flex gap-[16px] w-full;
+}
+
+.google-button {
+  @apply flex items-center justify-center w-full cursor-pointer !bg-[transparent] !border-main !py-0 !rounded-lg !shadow-none !opacity-100 !outline-none;
+}
+
+.google-button div,
+.google-button span {
+  padding: 0 !important;
+}

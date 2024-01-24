@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model WP.Models.Person
+
+@{
+    ViewData["Title"] = "Login";
+}
+<div class="d-flex justify-content-center">
+    <h1>
+        Login
+    </h1>
+</div>
+<hr />
+<div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Email</label>
+                <input asp-for="email" class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Password</label>
+                <input asp-for="password" class="form-control" />
+                <span class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input name="role" type="radio" value="client" />
+                <span>I'm a Client</span> <br />
+                <input asp-for="role" name="role" type="radio" value="admin" />
+                <span>I'm a Admin</span> <br />
+            </div>
+            <div class="form-group">
+                <input onclick="proverka_false()" type="submit" value="Log in" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
