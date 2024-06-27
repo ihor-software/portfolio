@@ -1,0 +1,188 @@
+.collapse.show {
+    display: block !important;
+  }
+  
+  .navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px; 
+    height: 100%;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+  
+  .navbar-toggler {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px; 
+  }
+  
+  .navbar-brand {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .nav-link {
+    margin: 0 10px;
+  }
+  
+  .header_area .navbar {
+    background: #ffffff;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+  }
+  
+  .home_banner_area {
+    margin-top: 100px;
+  }
+  
+  .btn {
+    margin-right: 5px;
+  }
+  
+  @media (max-width: 700px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .home_right_img {
+      order: -1;
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .row {
+      flex-direction: row;
+      margin-bottom: 20px;
+  
+    }
+  
+    .col-lg-5, .col-lg-7 {
+      width: 50%;
+      box-sizing: border-box;
+    }
+  }
+  
+  .tab-bar {
+    margin-top: 0px;
+  }
+
+  .horizontal-layout {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .launch-parameters, .account-details {
+    flex: 0 0 10%;
+    padding: 10px; 
+  }
+
+  .tab-component {
+    flex: 0 0 80%; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    flex-direction: column; 
+    padding-top: 0; 
+    background-color: #fff; 
+  }
+
+  .tab-content {
+    padding: 0; 
+  }
+
+  .diagnostics-page {
+    width: 100%; 
+    padding-top: 0; 
+    margin-top: 0;
+    overflow: auto;
+  }
+
+  .diagnostics-page table {
+    margin-top: 0 !important;
+  }
+
+  .component-card {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; 
+    max-width: 500px; 
+  }
+  
+  .centered-card {
+    border: 2px dotted #000;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 800px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .component-card {
+    border: 2px #000; 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px auto; 
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: #E5FEE5;
+  }
+  
+  .component-card.account {
+    background-color: #c4d8e2;
+    margin-bottom: 20px;  
+  }
+  
+  /*configurator*/
+    
+  .device {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: grab;
+  }
+  
+  .device.board img {
+    width: 300px;
+    height: auto;
+  }
+  
+  .device.sensor img {
+    width: 100px;
+    height: auto;
+  }
+  
+  p {
+    margin-top: 10px;
+    font-size: 16px;
+  }

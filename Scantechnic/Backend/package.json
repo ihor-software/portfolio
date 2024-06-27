@@ -1,0 +1,16 @@
+{
+  "name": "temperature-recognition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "pandas": "0.0.3",
+    "tensorflow": "^2.9.0"
+  },
+  "devDependencies": {
+    "node-gyp": "^8.4.1"
+  }
+}
